@@ -15,7 +15,7 @@ runs:
         cp ${{ github.action_path }}/package.json .
         cp ${{ github.action_path }}/package-lock.json .
     - id: semantic-release-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: 'node_modules'
         key: ${{ runner.os }}-semantic-release-${{ hashFiles('package-lock.json') }}
